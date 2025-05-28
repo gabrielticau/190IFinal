@@ -4,7 +4,7 @@ export PYTHONPATH="$PYTHONPATH:$pwd"
 
 python train/trainer.py \
 --pretrained_path "stable-diffusion-v1-5/stable-diffusion-v1-5" \
---monet_path "/cs/student/gabrielticau/cs190i/final/Diffusion-LoRA-Style-Transfer/MonetImages" \
+--monet_path "/root/190IFinal/data/images" \
 --center_crop false \
 --lora_r 8 \
 --lora_alpha 16 \
