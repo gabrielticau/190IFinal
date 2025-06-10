@@ -14,7 +14,7 @@ class DiffusionLoRAModule(pl.LightningModule):
         self.train_strength = train_strength
         self.lr = lr
 
-        self.prefix = 'A Monet painting, '
+        self.prefix = 'A Painting'
     
     def training_step(self, batch, batch_idx):
         images, captions = batch

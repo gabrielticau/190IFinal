@@ -4,7 +4,7 @@ export PYTHONPATH="$PYTHONPATH:$pwd"
 
 python train/trainer.py \
 --pretrained_path "stable-diffusion-v1-5/stable-diffusion-v1-5" \
---monet_path "/root/190IFinal/data/images" \
+--monet_path "/home/gabit/190IFinal/data/images" \
 --center_crop false \
 --lora_r 8 \
 --lora_alpha 16 \
@@ -14,4 +14,4 @@ python train/trainer.py \
 --batch_size 2 \
 --grad_accumulation 1 \
 --max_epochs 1 \
---save_name "monet_all"
+--save_name "ukiyoe_all"

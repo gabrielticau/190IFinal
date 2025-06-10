@@ -32,13 +32,15 @@ class MonetDataset(Dataset):
         image_path = os.path.join(self.image_base_path, image_name)
 
         im = Image.open(image_path)
+        # Convert to RGB to ensure 3 channels (handles grayscale, RGBA, etc.)
+        im = im.convert('RGB')
         im = self.image_transforms(im)
 
         # caption
         caption_file = self.captions[idx]
         caption_path = os.path.join(self.caption_base_path, caption_file)
 
-        f = open(f'{caption_path}', 'r')
-        cap = f.read()
+        with open(caption_path, 'r') as f:
+            cap = f.read().strip()
 
         return im, cap
