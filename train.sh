@@ -1,0 +1,17 @@
+python multi_style_trainer.py \
+        --pretrained_path runwayml/stable-diffusion-v1-5 \
+        --style1_path ./datasets/monet \
+        --style1_prefix "A Monet painting, " \
+        --style2_path ./datasets/ukiyoe \
+        --style2_prefix "A Japanese painting, " \
+        --lora_r 16 \
+        --lora_alpha 32 \
+        --lora_dropout 0.1 \
+        --train_strength 0.3 \
+        --learning_rate 1e-05 \
+        --gating_lr 0.0001 \
+        --batch_size 4 \
+        --max_epochs 100 \
+        --style_consistency_weight 0.1 \
+        --diversity_weight 0.05 \
+        --save_name monet_ukiyoe_blend
