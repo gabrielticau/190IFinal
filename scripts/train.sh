@@ -14,4 +14,4 @@ python train/trainer.py \
 --batch_size 2 \
 --grad_accumulation 1 \
 --max_epochs 1 \
---save_name "ukiyoe_all"
+--save_name "token_fusion_all"
