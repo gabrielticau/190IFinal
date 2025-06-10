@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PYTHONPATH="$PYTHONPATH:$pwd"
+export PYTHONPATH="$PYTHONPATH:$(pwd)"
 
 python inference/transfer_style.py \
 --pretrained_path "stable-diffusion-v1-5/stable-diffusion-v1-5" \
